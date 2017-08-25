@@ -21,6 +21,7 @@ export default class AddPatient extends React.Component {
         this.watchGender = this.watchGender.bind(this);
         this.watchGender = this.watchLevel.bind(this);
     }
+    
     static navigationOptions = {
         title: 'Add Patient',
     };
@@ -48,6 +49,7 @@ export default class AddPatient extends React.Component {
         var db = firebase.database();
         let dbRef = db.ref().child('Patients');
         dbRef.push(patientData)
+        this.props.navigation.navigate('ShowPatient');
          
     }
 

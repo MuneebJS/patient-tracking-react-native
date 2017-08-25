@@ -31,7 +31,7 @@ export default class Home extends React.Component {
             <View style={[styles.container]}>
             <Text>Welcome to Patient Tracking App</Text>
             <Button style={styles.buttonStyle}  title="Add Patient" onPress={this.props.addPatNav} />
-        {this.state.status && <Text>Dynamic</Text>}
+            <Button style={styles.buttonStyle}  title="See Patients" onPress={this.props.showPatNav} />
         </View>
         ) 
     }

@@ -51,7 +51,8 @@ export default class App extends Component {
     return (
       
       <View>
-           <Home addPatNav={() => navigate('AddPatient')} />
+           <Home addPatNav={() => navigate('AddPatient')} showPatNav={() => navigate('ShowPatient')} />
+
              {/* <Text>Hll</Text> */}
       </View>
     );
