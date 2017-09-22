@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, Button, StyleSheet, FlatList, Picker } from 'react-native';
+import { Text, View, TextInput, Button, StyleSheet, FlatList, Picker,ScrollView } from 'react-native';
 // import * as firebase from 'firebase';
 import * as firebase from 'firebase';
 import styles from '../style'
@@ -16,7 +16,6 @@ export default class AddPatient extends React.Component {
             gender: 'male',
             senLevel: 'normal',
             description: 'n/a'
-
         };
         this.watchGender = this.watchGender.bind(this);
         this.watchGender = this.watchLevel.bind(this);
@@ -41,6 +40,7 @@ export default class AddPatient extends React.Component {
                 desease: this.state.nameDesease,
                 gender: this.state.gender,
                 senLevel: this.state.senLevel,
+    
                 description: this.state.description
             }
               
@@ -62,7 +62,7 @@ export default class AddPatient extends React.Component {
 
     render() {
         return (
-            <View style={styles.container} >
+            <ScrollView style={styles.container} >
                 <Text style={styles.margin20}>Patient Name</Text>
                 <TextInput
                     style={{ height: 40, borderColor: '#eee', borderWidth: 0, }}
@@ -96,7 +96,7 @@ export default class AddPatient extends React.Component {
                     placeholder="Desease"
                 />
             <Button title="Add" onPress={this.addData.bind(this)}/>
-            </View>
+            </ScrollView>
         )
     }
 }

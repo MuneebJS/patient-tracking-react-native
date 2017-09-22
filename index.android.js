@@ -34,7 +34,7 @@ const config = {
 };
 firebase.initializeApp(config);
 
-
+console.disableYellowBox = true;
 
 
 export default class App extends Component {

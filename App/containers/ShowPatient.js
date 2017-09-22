@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, Button, FlatList } from 'react-native';
+import { Text, View, TextInput, Button, FlatList,ScrollView } from 'react-native';
 import * as firebase from 'firebase';
 import styles from '../style'
 // import { SearchBar } from 'react-native-elements'
@@ -98,7 +98,7 @@ export default class ShowPatient extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <TextInput multiline={true}
                     style={{ height: 40, borderColor: '#eee', borderWidth: 0, }}
                     onChangeText={(text) => this.searchByName(text.toLowerCase())}
@@ -155,7 +155,7 @@ export default class ShowPatient extends React.Component {
                         </View>
                     }
                 />}
-            </View>
+            </ScrollView>
         )
     }
 }
